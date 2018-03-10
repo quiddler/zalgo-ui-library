@@ -4,13 +4,48 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+// ROUTES !!!
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { UserComponent } from './user/user.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+const appRoutes: Routes = [
+    { 
+        path: 'contact', 
+        component: ContactComponent 
+    },
+    { 
+        path: 'user/:name', 
+        component: UserComponent },
+    {
+        path: 'home',
+        component: HomeComponent,
+        data: { title: 'American Dream' }
+    },
+    { 
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full'
+    },
+    { 
+        path: '**', 
+        component: PageNotFoundComponent 
+    }
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ContactComponent,
+    UserComponent,
+    PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes, { enableTracing: true }) // <-- 'enableTracing' is for debugging purposes only !!!
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
