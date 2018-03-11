@@ -21,8 +21,7 @@ const appRoutes: Routes = [
         component: UserComponent },
     {
         path: 'home',
-        component: HomeComponent,
-        data: { title: 'American Dream' }
+        component: HomeComponent
     },
     { 
         path: '',
