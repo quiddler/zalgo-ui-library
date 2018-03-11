@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { UserComponent } from './user/user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HeaderComponent } from './header/header.component';
 const appRoutes: Routes = [
     { 
         path: 'contact', 
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     HomeComponent,
     ContactComponent,
     UserComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
