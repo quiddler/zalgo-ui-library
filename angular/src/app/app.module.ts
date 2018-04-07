@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -44,6 +45,7 @@ const appRoutes: Routes = [
     HeaderComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes, { enableTracing: true }) // <-- 'enableTracing' is for debugging purposes only !!!
